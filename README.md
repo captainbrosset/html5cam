@@ -3,7 +3,7 @@ html5cam
 
 just playing with html5 APIs:
 - getUserMedia
-- <canvas>
-- <video>
+- &lt;canvas&gt;
+- &lt;video&gt;
 - requestAnimationFrame
 - CSS filters
