@@ -1,0 +1,28 @@
+body {
+  background: black url(http://www.wallm.com/images/2012/12/grunge-background-texture-7-by-madsin-on-deviantart.jpg) repeat top left;
+  padding: 0;
+  color: white;
+  font-family: arial;
+  font-size: 1.5em;
+}
+.frame {
+  margin: 1em auto;
+  border: 1em solid white;
+  background: black;
+  width: 640px;
+  height: 480px;
+}
+.tools {
+  margin: 1em auto;
+  text-align: center;
+}
+.tools h2 {
+  display: inline;
+}
+.tools button {
+  font-size: 1em;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+}

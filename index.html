@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>cam</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="frame">
+      <canvas width="640" height="480"></canvas>
+      <video style="display:none" autoplay></video>
+    </div>
+    <div class="tools">
+      <div class="transforms">
+        <h2>Transform</h2>
+        <button data-transform="standard">none</button>
+        <button data-transform="rotate4">rotate4</button>
+        <button data-transform="split4">split4</button>
+        <button data-transform="hFlip">hFlip</button>
+        <button data-transform="flipAll">flipAll</button>
+      </div>
+      <div class="filters">
+        <h2>Filter</h2>
+        <button data-filter="bw">bw</button>
+        <button data-filter="contrast">contrast</button>
+        <button data-filter="hue120">hue120</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
