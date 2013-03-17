@@ -128,6 +128,18 @@ var video2canvasDrawer = {
     ctx.scale(-1, -1);
     ctx.drawImage(video, 0, 0, w/2, h/2, -canvas.width, -canvas.height, canvas.width/2, canvas.height/2);
     ctx.restore();
+  },
+  _turnAngle: 0,
+  turn: function(video, ctx) {
+    var canvas = ctx.canvas;
+    var w = video.videoWidth, h = video.videoHeight;
+    ctx.save();
+    ctx.translate(canvas.width/2, canvas.height/2);
+    ctx.rotate(this._turnAngle);
+    ctx.drawImage(video, 0, 0, w, h, -canvas.width/2, -canvas.height/2, canvas.width, canvas.height);
+    ctx.restore();
+    this._turnAngle = (this._turnAngle + Math.PI/64) % (Math.PI*2);
+    console.log(this._turnAngle)
   }
 };
 
