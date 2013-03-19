@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="frame">
-      <canvas width="640" height="480"></canvas>
+      <canvas width="640" height="480" title="click to download"></canvas>
       <video style="display:none" autoplay></video>
     </div>
     <div class="tools">
@@ -18,15 +18,21 @@
         <button data-transform="split4">split4</button>
         <button data-transform="hFlip">hFlip</button>
         <button data-transform="flipAll">flipAll</button>
-        <button data-transform="turn">turn</button>
       </div>
       <div class="filters">
-        <h2>Filter</h2>
+        <h2>Filters</h2>
+        <button data-filter="standard">none</button>
         <button data-filter="bw">bw</button>
-        <button data-filter="contrast">contrast</button>
-        <button data-filter="hue120">hue120</button>
+        <button data-filter="saturate">saturate</button>
+        <button data-filter="lines">lines</button>
+        <button data-filter="grey3">grey3</button>
+        <button data-filter="bi">bi</button>
+        <button data-filter="invert">invert</button>
       </div>
     </div>
+    <script src="engine.js"></script>
+    <script src="video2canvas.js"></script>
+    <script src="effect.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
