@@ -1,0 +1,3 @@
+- aspect ratio (check the video's dimensions, and crop where needed)
+- add overlays (transforms, filters, overlays)
+- embeddable

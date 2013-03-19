@@ -7,7 +7,8 @@
   </head>
   <body>
     <div class="frame">
-      <canvas width="640" height="480" title="click to download"></canvas>
+      <canvas width="420" height="420" id="video"></canvas>
+      <canvas width="420" height="420" id="overlay" title="click to download"></canvas>
       <video style="display:none" autoplay></video>
     </div>
     <div class="tools">
@@ -23,16 +24,21 @@
         <h2>Filters</h2>
         <button data-filter="standard">none</button>
         <button data-filter="bw">bw</button>
-        <button data-filter="saturate">saturate</button>
-        <button data-filter="lines">lines</button>
-        <button data-filter="grey3">grey3</button>
+        <button data-filter="grey3">3grey</button>
         <button data-filter="bi">bi</button>
+        <button data-filter="offset">offset</button>
         <button data-filter="invert">invert</button>
+      </div>
+      <div class="overlays">
+        <h2>Overlays</h2>
+        <button data-overlay="standard">none</button>
+        <button data-overlay="lines">lines</button>
       </div>
     </div>
     <script src="engine.js"></script>
     <script src="video2canvas.js"></script>
     <script src="effect.js"></script>
+    <script src="overlay.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

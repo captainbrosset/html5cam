@@ -6,15 +6,20 @@ body {
   font-size: 1.5em;
 }
 canvas {
-  background: white;
   cursor: pointer;
 }
 .frame {
   margin: 1em auto;
   border: 1em solid white;
   background: black;
-  width: 640px;
-  height: 480px;
+  width: 420px;
+  height: 420px;
+  position: relative;
+}
+.frame canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .tools {
   margin: 1em auto;

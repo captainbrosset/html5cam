@@ -1,10 +1,11 @@
 // Initializing our elements
 var video = document.querySelector('video');
-var canvas = document.querySelector('canvas'), ctx = canvas.getContext('2d');
+var canvas = document.querySelector('canvas#video'), ctx = canvas.getContext('2d');
+var overlay = document.querySelector('canvas#overlay'), ctxOverlay = overlay.getContext('2d');
 var mediaStream = null;
 
 // Init the snapshot shit up
-canvas.addEventListener('click', function(e) {
+overlay.addEventListener('click', function(e) {
   document.location.href = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
 });
 
@@ -17,10 +18,17 @@ transformBtns.forEach(function(item, index, array) {
   });
 });
 
+// Overlay handler
+var overlayHandler = new CanvasOverlay(ctxOverlay);
+var overlayBtns = [].slice.call(document.querySelectorAll('.overlays button'));
+overlayBtns.forEach(function(item, index, array) {
+  item.addEventListener('click', function(e) {
+    overlayHandler.use(e.target.dataset.overlay);
+  });
+});
+
 // Effect handler
 var effects = new CanvasEffect(ctx);
-
-// Effect UI init
 var filterBtns = [].slice.call(document.querySelectorAll('.filters button'));
 filterBtns.forEach(function(item, index, array) {
   item.addEventListener('click', function(e) {
