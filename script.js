@@ -1,11 +1,14 @@
 // Initializing our elements
 var video = document.querySelector('video');
-var canvas = document.querySelector('canvas#video'), ctx = canvas.getContext('2d');
-var overlay = document.querySelector('canvas#overlay'), ctxOverlay = overlay.getContext('2d');
+var canvas = document.querySelector('canvas#video'),
+  ctx = canvas.getContext('2d');
+var overlay = document.querySelector('canvas#overlay'),
+  ctxOverlay = overlay.getContext('2d');
 var mediaStream = null;
 
 // Init the snapshot shit up
 overlay.addEventListener('click', function(e) {
+  // FIXME: overlays are not save here, need to get imageData from both canvas, then draw both to another canvas and save this one instead
   document.location.href = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
 });
 
@@ -38,7 +41,9 @@ filterBtns.forEach(function(item, index, array) {
 });
 
 // Requesting the video feed from the cam and streaming it to the video tag
-navigator.getUserMedia({video: true}, function(stream) {
+navigator.getUserMedia({
+  video: true
+}, function(stream) {
   mediaStream = stream;
   video.src = window.URL.createObjectURL(mediaStream);
 });

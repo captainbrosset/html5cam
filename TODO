@@ -1,3 +1,6 @@
 - aspect ratio (check the video's dimensions, and crop where needed)
 - add overlays (transforms, filters, overlays)
 - embeddable
+  - configure w/h
+  - callback when snapshot is made
+  - ability to add more overlays/effects/transforms
