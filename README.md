@@ -1,7 +1,7 @@
 html5cam
 ========
 
-*Edit : the HTML5cam demo became cravat -> http://github.com/captainbrosset/cravat
+*Edit : the HTML5cam demo became cravat -> http://github.com/captainbrosset/cravat*
 
 just playing with html5 APIs:
 - getUserMedia
